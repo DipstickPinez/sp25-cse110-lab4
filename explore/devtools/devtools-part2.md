@@ -1,0 +1,4 @@
+1. What was the bug?
+    - The numbers we input into the inputs are interpreted as strings, so when it adds the two numbers together, it actually concatenates the numbers together as strings. So, '1' + '2' gives us '12' because it concatenates them together.
+2. How would you fix it? Include a screenshot of your fix. Name it fix.png (or whatever image extension you would like to use) and add it to your expand/screenshots directory.
+    - First, we perform some numeric conversion on num1 and num2, to convert them from strings into actual numbers we can add together. However, I then use a check to see if either of the converted numbers are "NaN", and if so, we return an error. This way, we catch any instances where a user inputs something that's a not a number.
